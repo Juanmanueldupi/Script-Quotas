@@ -3,12 +3,6 @@
 #Versión: GNU bash, versión 5.1.4(1)-release (x86_64-pc-linux-gnu)
 #Descripción: funcion de comprobacion si existe el directorio /QUOTA
 #Fecha de creación: mar 29 mar 2022 10:30:58 CET
-#Fecha de modificación:
-
-#zona de declaracion de variables
-
-#fin zona
-
 
 #zona declaracion de funciones
 
