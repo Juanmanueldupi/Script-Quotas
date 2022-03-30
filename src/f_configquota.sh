@@ -8,12 +8,24 @@
 function f_funcionquota {
 echo "Ahora procedemos a editar las cuotas"
 sleep 1s
-echo "Por favor procede a ingresar el usuario al que quieres aplicar la cuota"
-read usuario
+echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota"
+read USER
 sleep 1s
 echo 'Ahora procede a ingresar el límite blando de la cuota (Ej: 200M 5G)'
 read blando
 echo 'Ahora procede a ingresar el límite duro de la cuota (Ej: 250M 6G)'
 read duro
-quotatool -u $usuario -bq $blando -l $duro $dir
-}
+echo 'Quieres añadir inodos para limitar la cantidad de archivos? (s/n)'
+read conf
+if [[ $conf = s ]] [[ $conf = S ]]; then
+	echo 'Dime el límite blando de inodos (Ej: 1000)'
+	read inodob
+	echo 'Dime el límite duro de inodos (Ej:1500)'
+	read inodod
+	quotatool -u $USER -bq $blando -l $duro -iq $inodob -l $inodod $dir
+else
+	echo 'Has decidido no insertar inodos'
+	quotatool -u $USER -bq $blando -l $duro $dir
+fi
+listado=less /etc/passwd | awk -F ':' '{print $1}' 
+edquota -p $USER $listado
