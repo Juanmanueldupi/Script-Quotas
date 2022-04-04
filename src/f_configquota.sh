@@ -17,7 +17,7 @@ echo 'Ahora procede a ingresar el límite duro de la cuota (Ej: 250M 6G)'
 read duro
 echo 'Quieres añadir inodos para limitar la cantidad de archivos? (s/n)'
 read conf
-if [[ $conf = s ]] [[ $conf = S ]]; then
+if [[ $conf = s ]] || [[ $conf = S ]]; then
 	echo 'Dime el límite blando de inodos (Ej: 1000)'
 	read inodob
 	echo 'Dime el límite duro de inodos (Ej:1500)'
