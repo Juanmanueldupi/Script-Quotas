@@ -10,7 +10,7 @@
 #salida: mensajes de confirmacion
 #entrada: -
 
-function f_existdir {
+function f_existedirectorio {
         if [ -d "/QUOTA" ]; then
         echo "El directorio ya existe"
         else
@@ -21,5 +21,3 @@ function f_existdir {
 
 
 #fin zona
-
-f_existdir
