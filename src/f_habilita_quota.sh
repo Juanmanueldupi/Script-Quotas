@@ -6,7 +6,7 @@ function f_habilita_quota {
     then
         quotacheck -ugv /QUOTA &> /dev/null
         mount -a
-        quotaon /QUOTA
+        quotaon -a /QUOTA
         echo 'se ha habilitado la cuota'
     else
         echo 'los ficheros ya existen'
