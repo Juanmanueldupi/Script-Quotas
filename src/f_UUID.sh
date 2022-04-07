@@ -11,7 +11,7 @@
 #entrada: -
 
 function f_UUID {
-        echo $(blkid | egrep /${!#}: | egrep -o "[a-z0-9]{8}-([a-z0-9]{4}-){3}[a-z0-9]{12}")
+        echo $(blkid | egrep /$1: | egrep -o "[a-z0-9]{8}-([a-z0-9]{4}-){3}[a-z0-9]{12}")
 }
 
 #fin zona
