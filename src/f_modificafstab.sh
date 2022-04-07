@@ -9,14 +9,11 @@
 
 #Zona de declaración de funciones
 
-function f_modifstab { $uuid,$QUOTA
-if grep -q '':
-    then 
-    echo "uuid=($uuid) $QUOTA ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
+function f_modifstab { 
 
+echo "uuid=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
 
-fi
 }
 
-#Argumentos ded la función: 
-#Valor devuelto por la función: 
+#Argumentos ded la función: $1 = UUID  $2 = /QUOTA
+#Valor devuelto por la función: Introducir información del disco en /etc/fstab
