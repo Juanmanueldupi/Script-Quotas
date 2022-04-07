@@ -7,18 +7,17 @@
 #zona declaracion de funciones
 
 #funcion que comprueba si existe el directorio
-#salida: 0 si existe, 1 si no existe
+#salida: mensajes de confirmacion
 #entrada: -
 
-function f_existdir {
+function f_existedirectorio {
         if [ -d "/QUOTA" ]; then
-        return 0
+        echo "El directorio ya existe"
         else
-        return 1
+        echo "No existe el directorio /QUOTA" 
+        echo "Creando directorio ..." && sleep 2s && echo $(mkdir /QUOTA) && echo "Directorio creado"
         fi
 }
 
-#fin zona
 
-f_existdir
-echo $?
+#fin zona
