@@ -7,15 +7,15 @@ source src/f_plantilla_cuota.sh
 source src/f_modificafstab.sh
 
 #Variables
-uuid=$(f_UUID)
+echo "dime el disco (ej: sda, vda, vdb...)"
+read disco
+uuid=$(f_UUID $disco)
 dir="/QUOTA"
-
 
 #llamada a las funciones
 
 f_compruebaroot
 f_existedirectorio
-f_UUID
 f_modifstab $uuid $dir
 f_habilita_quota
 f_plantilla_cuota
