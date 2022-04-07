@@ -11,7 +11,7 @@
 
 function f_modifstab { 
 
-echo "uuid=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
+echo "UUID=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
 
 }
 
