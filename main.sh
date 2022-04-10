@@ -22,7 +22,7 @@ f_existedirectorio
 f_modifstab $uuid $dir
 f_habilita_quota
 f_plantilla_cuota
-f_configquota
+f_configquota $dir
 
 
 

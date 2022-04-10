@@ -6,6 +6,7 @@
 #Desripción: Función de configuración de cuotas.
 
 function f_configquota {
+dir = $1
 echo "Ahora procedemos a editar las cuotas"
 sleep 1s
 echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota"
