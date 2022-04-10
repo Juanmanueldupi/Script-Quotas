@@ -27,4 +27,3 @@ if id -u $USER 2> /dev/null; then
 fi
 }
 
-f_plantilla_cuota
