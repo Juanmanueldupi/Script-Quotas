@@ -7,6 +7,7 @@ function f_habilita_quota {
     then
         quotacheck -ugv /QUOTA &> /dev/null
         mount -a
+        chmod o+rwx /QUOTA
         quotaon -a
         echo 'se ha habilitado la cuota'
     else
