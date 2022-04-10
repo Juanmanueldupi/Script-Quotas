@@ -27,6 +27,6 @@ else
 	echo 'Has decidido no insertar inodos'
 	quotatool -u $USER -bq $blando -l $duro $dir
 fi
-listado=less /etc/passwd | awk -F ':' '{print $1}' 
+listado=$(cat /etc/passwd | awk -F ':' '{print $1}') 
 edquota -p $USER $listado
 }
