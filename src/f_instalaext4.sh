@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Función que instala el sistema de archivos ext4 en el disco indicado
 # parámetros de entrada: disco, no tiene parámetros de salida
 

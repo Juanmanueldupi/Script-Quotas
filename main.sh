@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 source src/f_compruebaroot.sh
 source src/f_instalaext4.sh
 source src/f_UUID.sh

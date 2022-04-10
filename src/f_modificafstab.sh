@@ -12,6 +12,7 @@
 function f_modifstab { 
 
 echo "UUID=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
+mount -a
 
 }
 

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Función que habilita la cuota y crea los ficheros aquota.user y aquota.group
 # no tiene ni parámetros de entrada ni de salida
 
