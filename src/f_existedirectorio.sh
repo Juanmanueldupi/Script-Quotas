@@ -16,7 +16,6 @@ function f_existedirectorio {
         else
         echo "No existe el directorio /QUOTA" 
         echo "Creando directorio ..." && sleep 2s && echo $(mkdir /QUOTA) && echo "Directorio creado"
-        chmod o+rwx /QUOTA
         fi
 }
 
