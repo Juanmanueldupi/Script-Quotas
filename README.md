@@ -1,6 +1,6 @@
 # Script-Quotas
 
-![QuotaImg](/screenshots/quotaimg.png)
+![QuotaImg](/screenshots/QUOTAIMG.png)
 
 
 Repositorio conjunto sobre la creación de un script cuya función será la creación y configuración automática de cuotas.
