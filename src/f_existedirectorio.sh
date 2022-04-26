@@ -8,14 +8,16 @@
 
 #funcion que comprueba si existe el directorio
 #salida: mensajes de confirmacion
-#entrada: -
+#entrada: directorio donde instalemos la QUOTA
+
 
 function f_existedirectorio {
-        if [ -d "/QUOTA" ]; then
+	
+        if [ -d "$1" ]; then
         echo "El directorio ya existe"
         else
-        echo "No existe el directorio /QUOTA" 
-        echo "Creando directorio ..." && sleep 2s && echo $(mkdir /QUOTA) && echo "Directorio creado"
+        echo "No existe el directorio $1" 
+        echo "Creando directorio ..." && sleep 2s && echo $(mkdir $1) && echo "Directorio creado"
         fi
 }
 

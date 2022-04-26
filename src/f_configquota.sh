@@ -4,6 +4,8 @@
 #Fecha de creación: mar 29 mar 2022 10:26:54 CEST
 #Fecha de modificación:
 #Desripción: Función de configuración de cuotas.
+#Parametros de entrada: Directorio donde creamos la QUOTA
+
 
 function f_configquota {
 dir = $1

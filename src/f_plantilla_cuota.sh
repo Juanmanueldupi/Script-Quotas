@@ -9,9 +9,9 @@ if ! [ $(id -u) = 0 ]; then
 fi
 #Preguntar  el nombre del usuario y si queremos crearlo.
 read -p  "Nombre del usuario que deseas crear: " USER
-read -p  "Contraseña del usuario:  "  CON
+read -p -s  "Contraseña del usuario:  "  CON
 read -p "¿Deseas continuar con la operacón? S/N: " RESPUESTA
-if [[ $RESPUESTA  == S ]] || [[ $RESPUESTA == s ]]; then
+if [[ $RESPUESTA  == S ]] || [[ $RESPUESTA == s ]] || [[ $RESPUESTA  == Y ]] || [[ $RESPUESTA == y ]] ; then
 	echo "En curso..."
 	sleep 2s
 	else

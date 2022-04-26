@@ -8,7 +8,7 @@
 
 #funcion que consigue el UUID
 #salida: UUID
-#entrada: -
+#entrada: Disco que queremos buscar
 
 function f_UUID {
         echo $(blkid | egrep /$1: | egrep -o "[a-z0-9]{8}-([a-z0-9]{4}-){3}[a-z0-9]{12}")
