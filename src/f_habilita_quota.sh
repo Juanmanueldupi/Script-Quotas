@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Autor Roberto Rodriguez Marquez
 # Función que habilita la cuota y crea los ficheros aquota.user y aquota.group
 # no tiene ni parámetros de entrada ni de salida
 
@@ -12,6 +13,5 @@ function f_habilita_quota {
         echo 'se ha habilitado la cuota'
     else
         echo 'los ficheros ya existen'
-        exit
     fi
 }
