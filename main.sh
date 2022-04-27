@@ -10,6 +10,7 @@ lsblk -f
 echo " "
 echo "Dime el disco (ej: sda, vda, vdb...):"
 read disco
+f_compruebadisco $disco
 f_instalaext4 $disco
 uuid=$(f_UUID $disco)
 f_instalaquota

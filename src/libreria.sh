@@ -69,14 +69,26 @@ edquota -p $USER $listado
 
 function f_existedirectorio {
 	
-        if [ -d "$1" ]; then
-        echo "El directorio ya existe:"
-        else
-        echo "No existe el directorio $1" 
-        echo "Creando directorio ..." && sleep 2s && echo $(mkdir $1) && echo "Directorio creado"
-        fi
+    if [ -d "$1" ]; then
+    echo "El directorio ya existe:"
+    else
+    echo "No existe el directorio $1" 
+    echo "Creando directorio ..." && sleep 2s && echo $(mkdir $1) && echo "Directorio creado"
+    fi
 }
-
+#!/usr/bin/env bash
+#Autor: RoJuNa
+#funcion que comprueba si existe disco
+function f_compruebadisco {
+    if [ -e "/dev/$1" ]; then
+    echo "El disco ya existe:"
+    else
+    echo "No existe el disco $1"
+    echo "Dime el disco (ej: sda, vda, vdb...):" 
+    read disco
+    f_compruebadisco $disco
+    fi
+}
 
 #fin zona
 #!/usr/bin/env bash
