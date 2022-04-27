@@ -11,7 +11,7 @@
 
 function f_compruebaroot {
 if ! [ "$(id -u)" = 0 ]; then
-    echo "No eres root!"
+    echo "¡No eres root!"
     exit 
 fi
 }
@@ -31,23 +31,23 @@ function f_configquota {
 dir=$1
 echo "Ahora procedemos a editar las cuotas"
 sleep 1s
-echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota"
+echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota:"
 read USER
 sleep 1s
-echo 'Ahora procede a ingresar el límite blando de la cuota (Ej: 200M 5G)'
+echo 'Ahora procede a ingresar el límite blando de la cuota (Ej: 200M 5G):'
 read blando
-echo 'Ahora procede a ingresar el límite duro de la cuota (Ej: 250M 6G)'
+echo 'Ahora procede a ingresar el límite duro de la cuota (Ej: 250M 6G):'
 read duro
-echo 'Quieres añadir inodos para limitar la cantidad de archivos? (s/n)'
+echo 'Quieres añadir inodos para limitar la cantidad de archivos? (s/n):'
 read conf
 if [[ $conf = s ]] || [[ $conf = S ]]; then
-	echo 'Dime el límite blando de inodos (Ej: 1000)'
+	echo 'Dime el límite blando de inodos (Ej: 1000):'
 	read inodob
-	echo 'Dime el límite duro de inodos (Ej:1500)'
+	echo 'Dime el límite duro de inodos (Ej:1500):'
 	read inodod
 	quotatool -u $USER -bq $blando -l $duro -iq $inodob -l $inodod $dir
 else
-	echo 'Has decidido no insertar inodos'
+	echo 'Has decidido no insertar inodos:'
 	quotatool -u $USER -bq $blando -l $duro $dir
 fi
 listado=$(cat /etc/passwd | awk -F ':' '{print $1}') 
@@ -70,7 +70,7 @@ edquota -p $USER $listado
 function f_existedirectorio {
 	
         if [ -d "$1" ]; then
-        echo "El directorio ya existe"
+        echo "El directorio ya existe:"
         else
         echo "No existe el directorio $1" 
         echo "Creando directorio ..." && sleep 2s && echo $(mkdir $1) && echo "Directorio creado"
@@ -136,7 +136,8 @@ function f_plantilla_cuota {
 #Preguntar  el nombre del usuario y si queremos crearlo.
 read -p  "Nombre del usuario que deseas crear: " USER
 read -p "Contraseña del usuario:  " -s CON
-read -p "¿Deseas continuar con la operacón? S/N: " RESPUESTA
+echo " "
+read -p "¿Deseas continuar con la operación? S/N: " RESPUESTA
 if [[ $RESPUESTA  == S ]] || [[ $RESPUESTA == s ]] || [[ $RESPUESTA  == Y ]] || [[ $RESPUESTA == y ]] ; then
 	echo "En curso..."
 	sleep 2s
