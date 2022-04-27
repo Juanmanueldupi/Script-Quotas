@@ -28,7 +28,7 @@ fi
 
 
 function f_configquota {
-dir = $1
+dir=$1
 echo "Ahora procedemos a editar las cuotas"
 sleep 1s
 echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota"
@@ -90,9 +90,9 @@ function f_habilita_quota {
         mount -o defaults,usrquota,grpquota dev/$2 $1
         chmod o+rwx $1
         quotaon -a
-        echo 'se ha habilitado la cuota'
+        echo 'Se ha habilitado la cuota'
     else
-        echo 'los ficheros ya existen'
+        echo 'Los ficheros ya existen'
         
     fi
 }
