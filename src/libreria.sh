@@ -32,10 +32,13 @@ dir=$1
 echo "Ahora procedemos a editar las cuotas"
 sleep 1s
 echo "Por favor procede a ingresar el usuario al que quieres copiar la cuota:"
-read USER
+read USER 
 sleep 1s
 echo 'Ahora procede a ingresar el límite blando de la cuota (Ej: 200M 5G):'
 read blando
+if [ -z "$blando" ]; then
+    echo "No has ingresado ningún valor"
+fi
 echo 'Ahora procede a ingresar el límite duro de la cuota (Ej: 250M 6G):'
 read duro
 echo 'Quieres añadir inodos para limitar la cantidad de archivos? (s/n):'
