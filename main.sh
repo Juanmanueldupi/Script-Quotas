@@ -3,9 +3,11 @@ source src/libreria.sh
 
 #Variables
 clear -x
+echo "Acceso a la configuración de QUOTAS"
 f_compruebaroot
 lsblk -f
-echo "dime el disco (ej: sda, vda, vdb...)"
+echo " "
+echo "Dime el disco (ej: sda, vda, vdb...)"
 read disco
 f_instalaext4 $disco
 uuid=$(f_UUID $disco)
