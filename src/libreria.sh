@@ -133,13 +133,6 @@ mount -a
 #Valor devuelto por la función: Introducir información del disco en /etc/fstab
 #!/bin/bash
 function f_plantilla_cuota {
-#Comprueba si eres root
-if ! [ $(id -u) = 0 ]; then
-	echo "No eres root"
-	exit
-	else
-	echo "Eres root"
-fi
 #Preguntar  el nombre del usuario y si queremos crearlo.
 read -p  "Nombre del usuario que deseas crear: " USER
 read -p -s  "Contraseña del usuario:  "  CON

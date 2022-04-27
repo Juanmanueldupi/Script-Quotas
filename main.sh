@@ -16,7 +16,7 @@ dir="/QUOTA"
 
 f_existedirectorio $dir
 f_modifstab $uuid $dir
-f_habilita_quota
+f_habilita_quota $dir
 f_plantilla_cuota
 f_configquota $dir
 
