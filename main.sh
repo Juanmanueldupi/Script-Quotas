@@ -14,7 +14,7 @@ dir="/QUOTA"
 
 #llamada a las funciones
 
-f_existedirectorio
+f_existedirectorio $dir
 f_modifstab $uuid $dir
 f_habilita_quota
 f_plantilla_cuota
