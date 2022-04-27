@@ -125,7 +125,7 @@ function f_instalaquota() {
 function f_modifstab { 
 
 echo "UUID=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
-mount -o defaults,usrquota,grpquota dev/$3 $2
+mount -o defaults,usrquota,grpquota /dev/$3 $2
 
 }
 
