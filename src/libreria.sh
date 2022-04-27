@@ -87,7 +87,7 @@ function f_habilita_quota {
     if [[ ! -e $1/aquota.user && ! -e $1/aquota.group ]]
     then
         quotacheck -ugv $1 &> /dev/null
-        mount -a
+        mount -o defaults,usrquota,grpquota dev/$2 $1
         chmod o+rwx $1
         quotaon -a
         echo 'se ha habilitado la cuota'
@@ -125,7 +125,7 @@ function f_instalaquota() {
 function f_modifstab { 
 
 echo "UUID=$1 $2 ext4 defaults,usrquota,grpquota 0 0" >> /etc/fstab
-mount -a
+mount -o defaults,usrquota,grpquota dev/$3 $2
 
 }
 
@@ -135,7 +135,7 @@ mount -a
 function f_plantilla_cuota {
 #Preguntar  el nombre del usuario y si queremos crearlo.
 read -p  "Nombre del usuario que deseas crear: " USER
-read -p -s  "Contraseña del usuario:  "  CON
+read -p "Contraseña del usuario:  " -s CON
 read -p "¿Deseas continuar con la operacón? S/N: " RESPUESTA
 if [[ $RESPUESTA  == S ]] || [[ $RESPUESTA == s ]] || [[ $RESPUESTA  == Y ]] || [[ $RESPUESTA == y ]] ; then
 	echo "En curso..."
