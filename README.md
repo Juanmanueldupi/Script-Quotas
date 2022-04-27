@@ -38,6 +38,6 @@ Se han creado las siguientes funciones:
 
 * [f_instalaquota](/src/f_instalaquota.sh): usada para introducir la instalación de quota y quotatools en un sistema Debian.
 
-*[f_modificafstab](/src/f_modificafstab.sh): la usaremos para modificar el fichero /etc/fstab con una doble redirección para la introducción de los datos.
+* [f_modificafstab](/src/f_modificafstab.sh): la usaremos para modificar el fichero /etc/fstab con una doble redirección para la introducción de los datos.
 
 * [f_plantilla_cuota](/src/f_plantilla_cuota.sh): une la comprobación de superusuario para seguir con la creación del nuevo usuario, por último comprueba si el usuario está en el sistema para que en caso negativo continue con dicha función. 
